@@ -172,6 +172,7 @@
 }
 
 .modal {
+    display: none;
     position: fixed;
     opacity: 0;
     transform: translateY(-3rem);

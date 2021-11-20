@@ -8,48 +8,48 @@ const mobileNav = document.querySelector('.mobile-nav');
 const ctaButton = document.querySelector('.main-nav__item--cta');
 
 selectPlanButton.forEach((button) => {
-	button.addEventListener('click', () => {
-		modal.classList.add('open');
-		backdrop.style.display = 'block';
-		setTimeout(() => {
-			backdrop.classList.add('open');
-		}, 200);
-	});
+    button.addEventListener('click', () => {
+        backdrop.style.display = 'block';
+        setTimeout(() => {
+            modal.classList.add('open');
+            backdrop.classList.add('open');
+        }, 200);
+    });
 });
 
 if (modal) {
-	modalYes.addEventListener('click', () => {
-		console.log('okay');
-	});
+    modalYes.addEventListener('click', () => {
+        console.log('okay');
+    });
 
-	modalNo.addEventListener('click', () => {
-		modal.classList.remove('open');
-		setTimeout(() => {
-			backdrop.classList.remove('open');
-		}, 200);
-		backdrop.style.display = 'none';
-	});
+    modalNo.addEventListener('click', () => {
+        setTimeout(() => {
+            modal.classList.remove('open');
+            backdrop.classList.remove('open');
+        }, 200);
+        backdrop.style.display = 'none';
+    });
 }
 
 backdrop.addEventListener('click', () => {
-	mobileNav.classList.remove('open');
-	backdrop.classList.remove('open');
+    mobileNav.classList.remove('open');
+    backdrop.classList.remove('open');
 
-	setTimeout(() => {
-		backdrop.style.display = 'none';
-	}, 200);
-	if (modal) {
-		modal.classList.remove('open');
-	}
+    setTimeout(() => {
+        backdrop.style.display = 'none';
+    }, 200);
+    if (modal) {
+        modal.classList.remove('open');
+    }
 });
 
 toggleButton.addEventListener('click', () => {
-	mobileNav.classList.add('open');
-	backdrop.style.display = 'block';
+    backdrop.style.display = 'block';
 
-	setTimeout(() => {
-		backdrop.classList.add('open');
-	}, 200);
+    setTimeout(() => {
+        mobileNav.classList.add('open');
+        backdrop.classList.add('open');
+    }, 200);
 });
 
 // ctaButton.addEventListener('animationstart', (event) => {
