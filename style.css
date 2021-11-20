@@ -1,5 +1,5 @@
 #product-overview {
-    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url('/images/freedom.jpg') center / cover no-repeat border-box, #ff1b68;
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url('./images/freedom.jpg') center / cover no-repeat border-box, #ff1b68;
     max-width: 100%;
     width: 100vw;
     height: 33vh;
