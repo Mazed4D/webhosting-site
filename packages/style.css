@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'anonymousPro';
+    src: url(./fonts/AnonymousPro-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'anonymousPro';
+    src: url(./fonts/AnonymousPro-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+.background {
+    background: url('../images/plans-background.jpg') center/cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: grayscale(40%);
+    -webkit-filter: grayscale(40%);
+}
+
+.plan-section {
+    background-color: #cef8d7;
+    opacity: 0.97;
+    border: 5px solid #2e4734;
+    border-left: none;
+    margin: 1rem 1rem 1rem 0;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.plan-section:hover,
+.plan-section:active {
+    border: 5px solid #d96359;
+    border-left: none;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.plan-link {
+    color: black;
+    text-decoration: none;
+}
+
+.plan-title {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.plan-subtitle {
+    color: #828c89;
+}
+
+.plan-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.7rem;
+    font-size: 0.8rem;
+    color: white;
+    background: #ff5454;
+    padding: 0.5rem;
+    transform: rotate(45deg) translate(3.5rem, -1rem);
+    width: 12rem;
+    text-align: center;
+    -webkit-transform: rotate(45deg) translate(3.5rem, -1rem);
+    -moz-transform: rotate(45deg) translate(3.5rem, -1rem);
+    -ms-transform: rotate(45deg) translate(3.5rem, -1rem);
+    -o-transform: rotate(45deg) translate(3.5rem, -1rem);
+}
+
+.plan-description {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 2px solid #2e4734;
+    /* font-size: 1.1rem; */
+    /* font-family: 'AnonymousPro', sans-serif; */
+    /* font-weight: 700; */
+    font-size: 1.1rem;
+}
+
+.plan-section.middle {
+    margin: 1rem 0 1rem 1rem;
+    background-color: #e7f8eb;
+    border: 5px solid #2e4734;
+    border-right: none;
+    text-align: right;
+}
+
+.plan-section.middle:hover,
+.plan-section.middle:active {
+    border: 5px solid #d96359;
+    border-right: none;
+}
+
+.plan-section.premium {
+    background-color: #2e4734;
+}
+
+.plan-section.premium .plan-link {
+    color: white;
+}
+
+.plan-section.premium .plan-description {
+    color: black;
+}
+
+@media (min-width: 49rem) and (min-height: 60rem) {
+    .plan-section {
+        margin: 1rem auto 1rem 0;
+        max-width: 700px;
+    }
+    .plan-section.middle {
+        margin: 1rem 0 1rem auto;
+    }
+    .plan-badge {
+        margin: 0;
+    }
+}
